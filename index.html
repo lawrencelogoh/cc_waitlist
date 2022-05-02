@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Chef Companion</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <section class="hero has-text-centered">
+      <div class="hero-body">
+	<p class="title">
+	  Chef Companion
+	</p>
+	<p class="subtitle">
+	  Your very own cooking assistant
+	</p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <div class="container is-max-desktop has-text-centered">
+	<div class="columns is-mobile">
+	  <div class="column">
+	  <div class="card">
+	    <div class="card-content">
+	      <div class="content time has-text-centered title">
+		0
+	      </div>
+	    </div>
+	     <footer class="card-footer">
+	       <div class="card-footer-item is-centered has-text-white">
+		
+		Days
+	      </div>
+	      
+	    </footer>
+	    
+	  </div>
+	  
+	  
+	  </div>
+	  <div class="column">
+	  <div class="card">
+	    <div class="card-content">
+	      <div class="content time has-text-centered title">
+		0
+	      </div>
+	    </div>
+	     <footer class="card-footer">
+	      <div class="card-footer-item is-centered has-text-white">
+		Hours
+	      </div>
+	      
+	    </footer>
+	    
+	  </div>
+	  
+	  
+	  </div>
+	  <div class="column">
+	  <div class="card">
+	    <div class="card-content">
+	      <div class="content time has-text-centered title">
+		0
+	      </div>
+	    </div>
+	     <footer class="card-footer">
+	      <div class="card-footer-item is-centered has-text-white">
+		Minutes
+	      </div>
+	      
+	    </footer>
+	    
+	  </div>
+	  
+	  
+	  </div>
+	  <div class="column">
+	    <div class="card">
+	      <div class="card-content">
+		<div class="content time has-text-centered title ">
+		  0
+	      </div>
+	      </div>
+	      <footer class="card-footer">
+		<div class="card-footer-item is-centered has-text-white">
+		Seconds
+		</div>
+		
+	      </footer>
+	      
+	    </div>
+	    
+	    
+	  </div>
+	  
+	</div>
+	
+      
+	<a href="#waitlist"class="button is-primary is-medium">Join the waitlist</a>
+      
+      </div>
+    </section>
+    
+    <section class="section">
+      <div class="container is-max-desktop has-text-centered">
+	<p class="title">Add recipes</p>
+	<p class="subtitle">Create or import recipes with our editor</p>
+
+	<p class="title">Find recipes</p>
+	<p class="subtitle">Search through your cookbooks</p>
+
+	<p class="title">Design cookbooks</p>
+	<p class="subtitle">Use our templates or make your own design</p>	
+	<p class="title">Print cookbooks</p>
+	<p class="subtitle">Get a physical version of your cookbook</p>
+	
+      </div>
+
+    </section>
+    
+
+    <section id="waitlist" class="section">
+      <div class="container is-max-desktop has-text-centered">
+	<p class="title">Join the waitlist</p>
+	<p class="subtitle">We'll send you an email when we launch, nothing else</p>
+      </div>
+      <div class="container is-max-desktop">
+	
+	<form action="https://formspree.io/f/mqkngwzl" method="POST" >
+	  <div class="field">
+	    <label class="label">First Name</label>
+	    <input class="input" type="text" name="fname">
+	  </div>
+	  <div class="field">
+	    <label class="label">Last Name</label>
+	    <input class="input" type="text" name="lname">
+	  </div>
+	  <div class="field">
+	    <label class="label">Email </label>
+	    <input class="input" type="email" name="email">
+      </div>
+	  
+	  
+	  <button class="button is-primary" type="submit">Send</button>
+	</form>
+	
+      </div>
+      
+    </section>
+    
+    
+  </body>
+
+  <script>
+
+    var countDownDate = new Date("Aug 27, 2022 17:00:00").getTime();
+    
+
+    var x = setInterval(function() {
+
+
+	var now = new Date().getTime();
+	
+	var distance = countDownDate - now;
+	
+	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+	
+	const time = document.getElementsByClassName("time");
+	time[0].innerHTML = days;
+	time[1].innerHTML = hours;
+	time[2].innerHTML = minutes;
+	time[3].innerHTML = seconds;
+    },1000)
+  </script>
+</html>
